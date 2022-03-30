@@ -7,9 +7,12 @@ public class Main {
     public static void main(String[] args) {
         Service service = Service.Service();
 
+        Provider p = new Provider("Napolact", "Cluj-Napoca");
+        Provider p1 = new Provider("Marisan", "Bucuresti");
+
         //create restaurants
-        Restaurant r = new Restaurant("Cocosul Rosu", "Str Margelelor nr 4");
-        Restaurant r1 = new Restaurant("Cocosul Alb", "Str Aurel Vlaicu nr 5");
+        Restaurant r = new Restaurant("Cocosul Rosu", "Str Margelelor nr 4", p.getName());
+        Restaurant r1 = new Restaurant("Cocosul Alb", "Str Aurel Vlaicu nr 5", p1.getName());
 
         //create orders
         Order o = new Order(0, 250, "Str Margelelor nr 4", "Str Nandru", "20:30", "Mitica", 120);

@@ -6,18 +6,16 @@ import java.util.List;
 
 public class Client extends User{
     private String address;
+    //aggregation
     private List<Order> orders;
-    //private int totalAmountPaid;
 
     public Client(String name, String address){
         super(name);
-        //this.totalAmountPaid = totalAmountPaid;
         this.address = address;
         this.orders = new ArrayList<Order>();
     }
 
     public int getTotalAmountPaid() {
-        //return totalAmountPaid;
         int total = 0;
         for(Order o: orders) {
             total += o.getPrice();
@@ -32,10 +30,6 @@ public class Client extends User{
     public List<Order> getOrders() {
         return orders;
     }
-
-//    public void addAmountPaid(int price) {
-//        this.totalAmountPaid += price;
-//    }
 
     public void addOrder (Order order) {
         this.orders.add(order);

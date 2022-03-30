@@ -4,11 +4,14 @@ public class Restaurant {
     private String name;
     private String address;
     private int noOfDeliveries;
+    //composition
+    private final String providerName;
 
-    public Restaurant ( String name,String address) {
+    public Restaurant ( String name,String address, String providerName) {
         this.name = name;
         this.address = address;
         this.noOfDeliveries = 0;
+        this.providerName = providerName;
     }
 
     public String getAddress () {
@@ -17,6 +20,10 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+
+    public String getProviderName() {
+        return providerName;
     }
 
     public int getNoOfDeliveries() {
@@ -37,6 +44,7 @@ public class Restaurant {
 
     public void printRestaurant() {
         System.out.println("Restaurantul: " + getName());
+        System.out.println("Cu furnizorul: " + getProviderName());
         System.out.println("Are " + getNoOfDeliveries() + " comenzi efectuate.");
         System.out.println();
         System.out.println();
