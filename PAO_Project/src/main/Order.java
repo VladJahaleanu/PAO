@@ -49,9 +49,7 @@ public class Order {
         System.out.println("Livrata de: " + getCourierName());
         System.out.println("Ridicata de la adresa: " + getPickUpLocation());
         System.out.println("Va fi predata la adresa: " + getDropOffLocation());
-        System.out.println("La ora: " + getDeliveryTime());
-        System.out.println();
-        System.out.println();
+        System.out.println("La ora: " + getDeliveryTime() + "\n\n");
     }
 
 

@@ -12,7 +12,7 @@ public class Service {
     private static Service instance = null;
 
     private Service() {
-        System.out.println("Service started!");
+        System.out.println("Service started!\n");
         orders = new ArrayList<>();
         couriers = new ArrayList<>();
         clients = new LinkedList<>();

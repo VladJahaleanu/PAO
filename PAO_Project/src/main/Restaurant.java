@@ -45,8 +45,6 @@ public class Restaurant {
     public void printRestaurant() {
         System.out.println("Restaurantul: " + getName());
         System.out.println("Cu furnizorul: " + getProviderName());
-        System.out.println("Are " + getNoOfDeliveries() + " comenzi efectuate.");
-        System.out.println();
-        System.out.println();
+        System.out.println("Are " + getNoOfDeliveries() + " comenzi efectuate.\n\n");
     }
 }

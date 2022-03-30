@@ -15,9 +15,9 @@ public class Main {
         Restaurant r1 = new Restaurant("Cocosul Alb", "Str Aurel Vlaicu nr 5", p1.getName());
 
         //create orders
-        Order o = new Order(0, 250, "Str Margelelor nr 4", "Str Nandru", "20:30", "Mitica", 120);
-        Order o1 = new Order(1, 210, "Str Margelelor nr 4", "Str Margeanului", "21:30", "Fane", 45);
-        Order o2 = new Order(2, 330, "Str Aurel Vlaicu nr 5", "Str Margeanului", "09:45", "Fane", 22);
+        Order o = new Order(0, 250, r.getAddress(), "Str Nandru", "20:30", "Mitica", 120);
+        Order o1 = new Order(1, 210, r.getAddress(), "Str Margeanului", "21:30", "Fane", 45);
+        Order o2 = new Order(2, 330, r1.getAddress(), "Str Margeanului", "09:45", "Fane", 22);
 
         //add orders to service list
         service.addOrder(o);

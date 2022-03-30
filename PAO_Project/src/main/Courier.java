@@ -40,8 +40,6 @@ public class Courier extends User{
         System.out.println("Curierul: " + getName());
         System.out.println("Are salariul: " + getSalary());
         System.out.println("A facut pana acum: " + getNoOfOrders() + " livrari");
-        System.out.println("A parcurs : " + getTotalDistanceTraveled() + " km." );
-        System.out.println();
-        System.out.println();
+        System.out.println("A parcurs : " + getTotalDistanceTraveled() + " km.\n\n" );
     }
 }

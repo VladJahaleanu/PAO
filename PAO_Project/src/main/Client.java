@@ -39,8 +39,6 @@ public class Client extends User{
         System.out.println("Clientul: " + getName());
         System.out.println("Cu adresa: " +getAddress());
         System.out.println("Are " + getOrders().size() + " comenzi");
-        System.out.println("Cu valoarea totala de: " + getTotalAmountPaid());
-        System.out.println();
-        System.out.println();
+        System.out.println("Cu valoarea totala de: " + getTotalAmountPaid() + "\n\n");
     }
 }
