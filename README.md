@@ -5,6 +5,7 @@ Pentru proiectul la PAO am ales sa implementez o platforma de food delivery, ce 
 - Client
 - Curier
 - Restaurant
+- Furnizor
 - Comanda
 - Masina
 - Clasa Service
