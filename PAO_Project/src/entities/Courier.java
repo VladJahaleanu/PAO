@@ -1,4 +1,4 @@
-package main;
+package entities;
 
 public class Courier extends User{
     private int salary;
@@ -10,6 +10,13 @@ public class Courier extends User{
         this.noOfOrders = 0;
         this.totalDistanceTraveled = 0;
         this.salary = 2000;
+    }
+
+    public Courier( String name, int salary, int noOfOrders, int totalDistanceTraveled){
+        super(name);
+        this.noOfOrders = noOfOrders;
+        this.totalDistanceTraveled = totalDistanceTraveled;
+        this.salary = salary;
     }
 
     public int getTotalDistanceTraveled() {

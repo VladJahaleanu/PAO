@@ -1,4 +1,4 @@
-package main;
+package entities;
 
 import java.lang.String;
 import java.util.ArrayList;

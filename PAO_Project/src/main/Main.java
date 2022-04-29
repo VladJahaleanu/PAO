@@ -1,10 +1,13 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
+import entities.*;
+import services.DocumentException;
+import services.Service;
+
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DocumentException, IOException {
         Service service = Service.Service();
 
         Provider p = new Provider("Napolact", "Cluj-Napoca");
@@ -56,5 +59,13 @@ public class Main {
         //sort orders by the price, descending
         service.sortOrdersByPriceDescending();
         service.printOrders();
+
+        service.readCars();
+
+
+        Car car = new Car("B 44 MIC", "Diesel", "Aurel");
+
+        service.addCarToCSV(car);
+
     }
 }

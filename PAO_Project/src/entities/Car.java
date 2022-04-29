@@ -1,4 +1,4 @@
-package main;
+package entities;
 
 public class Car {
     private String licenseNumber;
