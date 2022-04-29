@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class CSVReader {
-    public static List readCourierCSV(String fileName) throws DocumentException {
+    public static List readCouriersCSV(String fileName) throws DocumentException {
         List<Courier> couriers = new ArrayList<>();
         Path pathToFile = Paths.get(fileName);
 

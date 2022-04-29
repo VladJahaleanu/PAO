@@ -60,12 +60,26 @@ public class Main {
         service.sortOrdersByPriceDescending();
         service.printOrders();
 
+        //Second phase, read and write stuff to csv files
         service.readCars();
-
 
         Car car = new Car("B 44 MIC", "Diesel", "Aurel");
 
         service.addCarToCSV(car);
+
+        service.readCouriers();
+        Courier courier = new Courier("Victor", 2200, 2, 250 );
+        service.addCourierToCSV(courier);
+
+        service.readOrders();
+        service.addOrderToCSV(o1);
+        service.addOrderToCSV(o2);
+
+        service.readProviders();
+        service.addProviderToCSV(p);
+
+        System.out.println("Finished!");
+
 
     }
 }

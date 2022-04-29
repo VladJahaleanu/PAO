@@ -19,7 +19,7 @@ public class Audit {
 
         try {
             BufferedWriter bwr = Files.newBufferedWriter(pathToFile, StandardCharsets.UTF_8, StandardOpenOption.APPEND);
-            bwr.write("\n" + actionName + "," + new Date());
+            bwr.write(  "\n" + actionName + "," + new Date());
             bwr.close();
         } catch (FileNotFoundException e) {
             throw new DocumentException("File Logs.csv not found!");

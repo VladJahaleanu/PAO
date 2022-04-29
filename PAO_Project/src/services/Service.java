@@ -104,9 +104,21 @@ public class Service {
         return orders;
     }
 
+    public static List<Courier> getCouriers() {
+        return couriers;
+    }
+
+    public static List<Car> getCars() {
+        return cars;
+    }
+
+    public static List<Provider> getProviders() {
+        return providers;
+    }
+
     public void readCouriers(){
         try {
-            couriers = CSVReader.readCourierCSV("CouriersI.csv");
+            couriers = CSVReader.readCouriersCSV("CouriersI.csv");
             Audit.writeAuditCSV("Read Couriers from CSV input file");
         } catch (DocumentException e) {
             e.printStackTrace();
@@ -136,7 +148,7 @@ public class Service {
 
     public void readOrders(){
         try {
-            providers = CSVReader.readOrdersCSV("OrdersI.csv");
+            orders = CSVReader.readOrdersCSV("OrdersI.csv");
             Audit.writeAuditCSV("Read Orders from CSV input file");
         } catch (DocumentException e) {
             e.printStackTrace();
@@ -144,13 +156,14 @@ public class Service {
         }
     }
 
+    //will add checks for the other objects later, no time now :(
     public static boolean verifyCarCSV(String fileName, Car car) throws DocumentException {
         Path pathToFile = Paths.get(fileName);
 
         try {
             BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.UTF_8);
 
-            String line = br.readLine();
+            String line;
             while ((line = br.readLine()) != null && !line.isEmpty()) {
                 String[] fields = line.split(",");
                 String license = fields[0];
@@ -170,6 +183,7 @@ public class Service {
             throw new DocumentException("Error while reading from the file!", e);
         }
     }
+
 
     public void addCarToCSV(Car car) throws DocumentException {
         cars.add(car);
