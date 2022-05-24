@@ -33,6 +33,7 @@ public class Service {
         cars = new ArrayList<>();
         restaurants = new ArrayList<>();
         providers = new ArrayList<>();
+        DatabaseService databaseService = new DatabaseService();
     }
 
     public static Service Service() {
@@ -92,6 +93,12 @@ public class Service {
         }
     }
 
+    public void printCouriers() {
+        for( Courier c: this.couriers) {
+            c.printCourier();
+        }
+    }
+
     public void sortOrdersByPriceDescending() {
         orders.sort(Comparator.comparing(Order::getPrice).reversed());
     }
@@ -134,6 +141,14 @@ public class Service {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
+    }
+
+    public void readCarsFromDB(){
+        cars = DatabaseService.displayCars();
+    }
+
+    public void readCouriersFromDB(){
+        couriers = DatabaseService.displayCouriers();
     }
 
     public void readProviders(){

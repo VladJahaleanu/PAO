@@ -6,12 +6,14 @@ import services.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws DocumentException, IOException {
         Service service = Service.Service();
 
-//        Provider p = new Provider("Napolact", "Cluj-Napoca");
+        Provider p = new Provider("Napolact", "Cluj-Napoca");
 //        Provider p1 = new Provider("Marisan", "Bucuresti");
 //
 //        //create restaurants
@@ -81,12 +83,26 @@ public class Main {
 
         Connection databaseConnection = DatabaseConfig.getDatabaseConnection();
         DatabaseHelper databaseHelper = DatabaseHelper.getDatabaseHelper();
-        String query = "insert into cars values(null, 'BC001AAA', 'Alex')";
-        try {
-            databaseHelper.executeSql(databaseConnection, query);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//        String query = "insert into cars values(null, 'BC001AAA', 'Alex')";
+//        try {
+//            databaseHelper.executeSql(databaseConnection, query);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+
+        Car c = new Car("SV99ALX", "LPG", "Alex");
+        DatabaseService databaseService = new DatabaseService();
+        //databaseService.addCar(c);
+        databaseService.addProvider(p);
+
+
+        //service.readCarsFromDB();
+        //service.readCouriersFromDB();
+        //databaseService.deleteCourierById(2);
+        //service.printCouriers();
+        databaseService.updateCourierSalary(1, 3333);
+
 
         System.out.println("Finished!");
 

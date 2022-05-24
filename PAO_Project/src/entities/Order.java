@@ -43,6 +43,8 @@ public class Order {
         return deliveryTime;
     }
 
+    public int getDeliveryDuration() { return deliveryDuration; }
+
     public void printOrder(){
         System.out.println("Comanda: " + getOrderNo());
         System.out.println("Cu pretul de: " + getPrice());
